@@ -19,11 +19,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(fireballPrefab,
-      attackPoint.
-      position, attackPoint.
-      rotation);
+            Instantiate(fireballPrefab, attackPoint.position, attackPoint.rotation);
         }
 
+
+
     }
+
+    
 }

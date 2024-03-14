@@ -14,22 +14,16 @@ public class Missile : MonoBehaviour
     }
     public void Update()
     {
-            transform.position +=
-            transform.forward *
-            speed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
+
     }
 
     public void OnTriggerEnter(Collider other)
     {
+        Destroy(other.gameObject);
+
         Destroy(gameObject);
+
     }
-
-    public void OnTriggerEnter()
-    {
-        Destroy(gameObject);
-    }
-
-    
-
 
 }
