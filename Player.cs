@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour
     public GameObject fireballPrefab;
 
     public Transform attackPoint;
+
+    public int coins;
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -26,5 +29,12 @@ public class Player : MonoBehaviour
 
     }
 
+    public void CollectCoins() 
+    {
+        coins += 1;
     
+    
+    }
+
+
 }
