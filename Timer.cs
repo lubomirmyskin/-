@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.WSA;
 
 public class Timer : MonoBehaviour
@@ -23,7 +24,8 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                EditorSceneManager.LoadScene(sceneName);
+                int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(sceneIndex);
             }
         }   
         
